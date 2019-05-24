@@ -70,7 +70,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   margin: 0;
-  opacity: .7;
+  opacity: .9;
   padding: 0.6rem;
 }
 
@@ -96,5 +96,5 @@ body {
 
 .headline.active {
   visibility: visible;
-  opacity: 1;
+  opacity: 0.9;
 }
