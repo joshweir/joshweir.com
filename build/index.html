@@ -34,6 +34,10 @@
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
+  <div class="headline">
+    <h1>Josh Weir</h1>
+    <span class="desc">A software engineer in the Sydney area - likes craft beer, good coffee and drumming. Currently focusing on React and Node.</span>
+  </div>
   <main class="g-min-height-100vh g-flex-centered g-bg-size-cover g-bg-cover g-pa-15" style="background-image: url(assets/josh-beach.jpg);">
     <div class="text-center g-max-width-700 g-flex-centered-item g-z-index-1 g-color-white">
       <ul class="list-inline">
@@ -56,5 +60,15 @@
     </div>
   </main>
 </body>
-
+<script>
+;(function () {
+  var headline = document.querySelector('.headline')
+  var links = document.querySelectorAll(".social-link")
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('mouseover', function() {
+      headline.classList.add('active')
+    });
+  }
+})()
+</script>
 </html>
