@@ -63,12 +63,11 @@
 <script>
 ;(function () {
   var headline = document.querySelector('.headline')
-  var links = document.querySelectorAll(".social-link")
-  for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener('mouseover', function() {
-      headline.classList.add('active')
-    });
-  }
+  var showHeadline = () => headline.classList.add('active')
+  ;[...document.querySelectorAll('.social-link')].map((link) =>
+    link.addEventListener('mouseover', showHeadline)
+  )
+  setTimeout(showHeadline, 2500)
 })()
 </script>
 </html>
