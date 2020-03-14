@@ -80,7 +80,7 @@ body {
 }
 
 .social-link:hover {
-  opacity: 1;
+  opacity: 0.99;
 }
 
 .headline {
