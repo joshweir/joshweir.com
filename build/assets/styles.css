@@ -60,6 +60,7 @@ body {
   padding: 0;
   margin: 0;
   margin-left: -8px;
+  text-align: center;
 }
 
 .list-inline-item {
@@ -83,12 +84,14 @@ body {
 }
 
 .headline {
-  position: absolute;
+  position: relative;
+  margin: 0;
+  /* position: absolute; */
   z-index: 2;
   text-align: center;
   right: 0;
   left: 0;
-  margin: 0 5rem;
+  /* margin: 0 5rem; */
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 1s linear;
@@ -97,4 +100,46 @@ body {
 .headline.active {
   visibility: visible;
   opacity: 0.9;
+}
+
+.headline.desc {
+  margin: 1em auto;
+  max-width: 80%;
+}
+
+.headline .desc {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.blurred-box {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);	
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  padding: 1em;
+  max-width: 50vw;
+}
+
+.blurred-box:before {
+  content: "";
+	position: absolute;
+	background: inherit;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+  box-shadow: inset 0 0 2000px 2000px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 0.6em;
+}
+
+@media only screen and (max-width: 900px) {
+  .blurred-box {
+    max-width: 90vw;
+  }
 }
